@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @hour_glass.name %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @hour_glass.price %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @hour_glass.description %>
+</p>
+
+<%= link_to 'Edit', edit_hour_glass_path(@hour_glass) %> |
+<%= link_to 'Back', hour_glasses_path %>

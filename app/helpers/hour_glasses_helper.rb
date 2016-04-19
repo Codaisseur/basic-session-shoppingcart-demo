@@ -1,0 +1,2 @@
+module HourGlassesHelper
+end

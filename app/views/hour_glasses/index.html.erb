@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Hour Glasses</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Price</th>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @hour_glasses.each do |hour_glass| %>
+      <tr>
+        <td><%= hour_glass.name %></td>
+        <td><%= hour_glass.price %></td>
+        <td><%= hour_glass.description %></td>
+        <td><%= link_to 'Show', hour_glass %></td>
+        <td><%= link_to 'Edit', edit_hour_glass_path(hour_glass) %></td>
+        <td><%= link_to 'Add to cart', shopping_cart_items_path(hour_glass_id: hour_glass.id, quantity: 1), method: :post %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Hour glass', new_hour_glass_path %>
